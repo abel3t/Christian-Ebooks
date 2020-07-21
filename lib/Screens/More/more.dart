@@ -4,8 +4,10 @@ import 'package:christianBooks/Utils/theme_config.dart';
 import 'package:christianBooks/Views/app_provider.dart';
 import 'package:christianBooks/Screens/Others/downloads.dart';
 import 'package:christianBooks/Screens/More/favorites.dart';
+import 'package:christianBooks/Screens/Others/License.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:provider/provider.dart';
+import 'package:christianBooks/Screens/More/setting.dart';
 
 class Profile extends StatefulWidget {
   @override
@@ -19,6 +21,10 @@ class _ProfileState extends State<Profile> {
   void initState() {
     super.initState();
     items = [
+      {
+        'icon': Feather.user,
+        'title': 'Abel Tran'
+      },
       {
         'icon': Feather.heart,
         'title': 'Favorites',
@@ -40,9 +46,25 @@ class _ProfileState extends State<Profile> {
         'function': () => showAbout(),
       },
       {
+        'icon': Icons.note,
+        'title': 'Notes'
+      },
+      {
+        'icon': Feather.bookmark,
+        'title': 'Bookmark'
+      },
+      {
+        'icon': Feather.share,
+        'title': 'Share the Christian Ebooks'
+      },
+      {
+        'icon': Feather.settings,
+        'title': 'Setting'
+      },
+      {
         'icon': Feather.file_text,
         'title': 'Licenses',
-        'function': () => _pushPageDialog(LicensePage()),
+        'function': () => _pushPageDialog(License()),
       },
     ];
   }
@@ -64,7 +86,6 @@ class _ProfileState extends State<Profile> {
       body: ListView.separated(
         padding: EdgeInsets.symmetric(horizontal: 10),
         shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
         itemCount: items.length,
         itemBuilder: (BuildContext context, int index) {
           if (items[index]['title'] == 'Dark Mode') {
@@ -134,7 +155,7 @@ class _ProfileState extends State<Profile> {
             'About',
           ),
           content: Text(
-            'Simple eBook app by JideGuru',
+            'Christian Ebooks',
           ),
           actions: <Widget>[
             FlatButton(

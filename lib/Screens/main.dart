@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:christianBooks/Utils/dialogs.dart';
 import 'package:christianBooks/Screens/Store/explore.dart';
 import 'package:christianBooks/Screens/Home/index.dart';
-import 'package:christianBooks/Screens/More/settings.dart';
+import 'package:christianBooks/Screens/More/more.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:christianBooks/Screens/Middle/index.dart';
 
@@ -65,18 +65,18 @@ class _MainScreenState extends State<MainScreen> {
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Feather.compass,
+                Feather.shopping_cart,
               ),
               title: Text(
-                'Explore',
+                'Store',
               ),
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Feather.settings,
+                Feather.menu,
               ),
               title: Text(
-                'Settings',
+                'More',
               ),
             ),
           ],
