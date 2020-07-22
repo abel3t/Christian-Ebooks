@@ -56,12 +56,20 @@ class _MainScreenState extends State<MainScreen> {
               ),
             ),
             BottomNavigationBarItem(
-              icon: Icon(
-                Feather.minus_circle,
+              icon: new Stack(
+              overflow: Overflow.visible,
+              children: <Widget>[
+                Text(''),
+                new Positioned(
+                    top: -25.0,
+                    child: new Image.asset('assets/images/image-demo.jpg'),
+                    width: 60,
+                    height: 60,
+                    left: -30,
+                )
+                ],
               ),
-              title: Text(
-                '',
-              ),
+              title: new Text('')
             ),
             BottomNavigationBarItem(
               icon: Icon(

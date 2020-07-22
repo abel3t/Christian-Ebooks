@@ -151,7 +151,6 @@ static const pageChannel = EventChannel('com.xiaofwang.epub_kitty/page');
                     ),
                   ),
                 ),
-                SizedBox(height: 5.0),
                 Hero(
                   tag: widget.authorTag,
                   child: Material(
@@ -166,12 +165,11 @@ static const pageChannel = EventChannel('com.xiaofwang.epub_kitty/page');
                     ),
                   ),
                 ),
-                SizedBox(height: 5.0),
                 _buildCategory(widget.entry, context),
                 Center(
                   child: Container(
-                    height: 20.0,
-                    width: MediaQuery.of(context).size.width,
+                    height: 30.0,
+                    width: MediaQuery.of(context).size.width / 2.5,
                     child: _buildDownloadReadButton(detailsProvider, context),
                   ),
                 ),
@@ -239,8 +237,12 @@ static const pageChannel = EventChannel('com.xiaofwang.epub_kitty/page');
             }
           });
         },
+        color: Colors.blue,
+        textColor: Colors.white,
+        shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
         child: Text(
           'Read Book',
+          style: TextStyle(fontSize: 18),
         ),
       );
     } else {
@@ -250,9 +252,13 @@ static const pageChannel = EventChannel('com.xiaofwang.epub_kitty/page');
           widget.entry.link[3].href,
           widget.entry.title.t.replaceAll(' ', '_').replaceAll(r"\'", "'"),
         ),
+        color: Colors.blue,
+        textColor: Colors.white,
         child: Text(
           'Download',
+          style: TextStyle(fontSize: 18),
         ),
+        shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
       );
     }
   }
@@ -309,7 +315,7 @@ static const pageChannel = EventChannel('com.xiaofwang.epub_kitty/page');
   _share() {
     Share.text(
       '${widget.entry.title.t} by ${widget.entry.author.name.t}',
-      'Read/Download ${widget.entry.title.t} from ${widget.entry.link[3]
+      '${widget.entry.title.t} from ${widget.entry.link[3]
           .href}.',
       'text/plain',
     );

@@ -59,7 +59,8 @@ class _ProfileState extends State<Profile> {
       },
       {
         'icon': Feather.settings,
-        'title': 'Setting'
+        'title': 'Setting',
+        'function': () => _pushPage(Setting())
       },
       {
         'icon': Feather.file_text,

@@ -6,7 +6,7 @@ import 'package:christianBooks/components/download_alert.dart';
 import 'package:christianBooks/Utils/DB/download_helper.dart';
 import 'package:christianBooks/Utils/DB/favorite_helper.dart';
 import 'package:christianBooks/Models/category.dart';
-import 'package:christianBooks/Utils/api.dart';
+import 'package:christianBooks/Utils/api-v2.dart';
 import 'package:christianBooks/Utils/constants.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';

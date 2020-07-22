@@ -3,7 +3,7 @@ import 'package:christianBooks/components/body_builder.dart';
 import 'package:christianBooks/components/book_card.dart';
 import 'package:christianBooks/components/loading_widget.dart';
 import 'package:christianBooks/Models/category.dart';
-import 'package:christianBooks/Utils/api.dart';
+import 'package:christianBooks/Utils/api-v2.dart';
 import 'package:christianBooks/Utils/functions.dart';
 import 'package:christianBooks/Views/home_provider.dart';
 import 'package:christianBooks/Screens/More/genre.dart';
